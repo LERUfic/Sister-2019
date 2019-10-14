@@ -3,6 +3,7 @@ import shlex
 import serpent
 
 def send_with_ns(file_name):
+    # uri = "PYRONAME:greetserver@159.65.129.224:7777"
     uri = "PYRONAME:greetserver@localhost:7777"
     with Pyro4.Proxy(uri) as gserver:
         with open(file_name, "rb") as f:
@@ -15,6 +16,7 @@ def send_with_ns(file_name):
             gserver.construct_file(file_name,"FileSent//LERUfic")
 
 def test_with_ns(command):
+    # uri = "PYRONAME:greetserver@159.65.129.224:7777"
     uri = "PYRONAME:greetserver@localhost:7777"
     gserver = Pyro4.Proxy(uri)
     print(gserver.routing(command))
