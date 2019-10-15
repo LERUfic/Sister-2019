@@ -1,5 +1,7 @@
-from greet import  *
+# from greet import  *
+from greet_centralhb import  *
 import Pyro4
+import os
 
 def start_with_ns():
     #name server harus di start dulu dengan  pyro4-ns -n localhost -p 7777
@@ -15,4 +17,9 @@ def start_with_ns():
 
 
 if __name__ == '__main__':
+    if os.path.isfile("session.db"):
+        os.remove("session.db")
+        open('session.db','a').close()
+    else:
+        open('session.db','a').close()
     start_with_ns()
