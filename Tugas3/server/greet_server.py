@@ -1,5 +1,6 @@
 # from greet import  *
-from greet_centralhb import  *
+# from greet_centralhb import  *
+from greet_alltoallhb import  *
 import Pyro4
 import os
 
