@@ -39,6 +39,11 @@ def replicateCreate(self,namainstance,name='filename000'):
                     except Pyro4.errors.CommunicationError:
                         print("Server is not Reachable. Try Again Later!")
 ```
+## Cara Kerja
+Client1 melakukan request update data suatu file ke fileserver1. fileserver1 melakukan proses update file pada storage miliknya. Setelah selesai melakukan update. maka fileserver1 berikutnya akan menjadi replication manager. Tugasnya adalah melakukan proses mengirim file yang barusan saja di-update untuk dikirim ke seluruh server.
+
+Agar hal ini bisa berjalan dengan semestinya. Fileserver harus menyimpan instance dari masing-masing server. Sehingga ketika ada fileserver baru yang bergabung. Perlu diadakan update list fileserver ke semua fileserver.
+
 ## Hasil Percobaan
 Berikut adalah kondisi awal pada masing-masing server.
 ![awal](images/before.png)
