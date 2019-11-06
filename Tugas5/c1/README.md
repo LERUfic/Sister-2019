@@ -1,5 +1,10 @@
 # Tugas 5
 
+## Author
+Nama: Aguel Satria Wijaya  
+NRP: 05111640000056  
+Mata Kuliah: Sistem Terdistribusi  
+
 ## Permasalahan
 Membuat sebuah data-centric agar ketika client ingin mengakses data dari salah satu tiga fileserver, bisa mengakses file yang benar.
 
